@@ -47,8 +47,6 @@ int main() {
 		printf("Enter integer 1: ");
 		for (int i = 0; i < operandCount; i++) {
 			if (scanf("%d", &operands[i]) != 1) {
-                                printf("Please enter an integer\n");
-                                printf("Enter integer %d:", i+1);
                                 i--;
                                 continue;
                         }
