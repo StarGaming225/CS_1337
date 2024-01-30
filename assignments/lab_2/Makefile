@@ -1,2 +1,2 @@
-ccalc: ccalc.c
-	$(CC) $(CFLAGS) -o ccalc ccalc.c
+ccalc: a.out
+	./a.out -o ccalc a.out

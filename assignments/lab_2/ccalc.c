@@ -1,13 +1,16 @@
 #include <stdio.h>
 
+// Checks to see if operator is valid
 int validateOperator(char op) {
 	return op == '+' || op == '-' || op == '*' || op == '/';
 }
 
+// Checks to see if operator / integer amount is more than one cause you can't get anywhere without two numbers
 int validateOperandCount(int count) {
 	return count > 1;
 }
 
+// Checks to see if the user is trying to divide by zero
 int validateOperands(int operands[], int count, char op) {
 	if (op == '/') {
 		for (int i=1; i<count; i++) {
@@ -20,11 +23,13 @@ int validateOperands(int operands[], int count, char op) {
 	return 1;
 }
 
+// Main function
 int main() {
 	char operator;
 	int operandCount, result = 0;
 
 	while (1) {
+		// Starting Operation input
 		printf("Enter Operation: ");
 		scanf(" %c", &operator);
 
@@ -35,6 +40,7 @@ int main() {
 			continue;
 		}
 
+		// Choosing how many integers to combine with the selected operation imput
 		printf("Enter number of integers: ");
 		scanf("%d", &operandCount);
 
@@ -43,6 +49,7 @@ int main() {
 			continue;
 		}
 
+		//Entering the selected amount of integers
 		int operands[operandCount];
 		printf("Enter integer 1: ");
 		for (int i = 0; i < operandCount; i++) {
@@ -52,7 +59,7 @@ int main() {
                         }
                 }
 
-
+		//Doing the mathmatical calculations
 		if (!validateOperands(operands, operandCount, operator)) {
 			continue;
 		}
@@ -84,6 +91,7 @@ int main() {
 				break;
 		}
 
+		//Presenting the problem and solution
 		printf("COMPUTING... *BEEP* *BOOP* %d %c ", operands[0], operator);
 		for (int i=1;i<operandCount;i++) {
 			printf("%d %c ", operands[i], (i == operandCount -1) ? '=' : operator);
