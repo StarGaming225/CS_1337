@@ -67,4 +67,14 @@ Connecting to 52.19.239.108:80... failed: Connection timed out.
 Retrying.
 
 --2024-03-12 18:32:39--  (try:18)  http://52.19.239.108/CS_1337_lecture_examples/control_flow/examples.c
-Connecting to 52.19.239.108:80... 
+Connecting to 52.19.239.108:80... failed: Connection timed out.
+Retrying.
+
+--2024-03-12 18:34:58--  (try:19)  http://52.19.239.108/CS_1337_lecture_examples/control_flow/examples.c
+Connecting to 52.19.239.108:80... failed: Connection timed out.
+Retrying.
+
+--2024-03-12 18:37:17--  (try:20)  http://52.19.239.108/CS_1337_lecture_examples/control_flow/examples.c
+Connecting to 52.19.239.108:80... failed: Connection timed out.
+Giving up.
+
